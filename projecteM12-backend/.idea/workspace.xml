@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c104847-c17c-44cf-8e66-dde74b913612" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Pakhv0X2yYoc37cf6UuBzHFxOK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/maiol/Desktop/springSalma-master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;3234f59f2293cd1bc2320501f46e2a67&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="ProjecteM12Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="projecteM12" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.projectem12maiol.projectem12.ProjecteM12Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c104847-c17c-44cf-8e66-dde74b913612" name="Changes" comment="" />
+      <created>1683702739122</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683702739122</updated>
+      <workItem from="1683702782440" duration="4930000" />
+      <workItem from="1683715141015" duration="4391000" />
+      <workItem from="1683799112637" duration="3485000" />
+      <workItem from="1683803507915" duration="535000" />
+      <workItem from="1683804151383" duration="22324000" />
+      <workItem from="1683896527386" duration="713000" />
+      <workItem from="1683897367474" duration="6638000" />
+      <workItem from="1683980559226" duration="5142000" />
+      <workItem from="1684396855871" duration="273000" />
+      <workItem from="1684404739539" duration="4928000" />
+      <workItem from="1684479823628" duration="773000" />
+      <workItem from="1684485469533" duration="5543000" />
+      <workItem from="1684739616961" duration="5748000" />
+      <workItem from="1684771035452" duration="12491000" />
+      <workItem from="1684853972809" duration="1533000" />
+      <workItem from="1684859150348" duration="15614000" />
+      <workItem from="1684879770228" duration="1163000" />
+      <workItem from="1684915088370" duration="1219000" />
+      <workItem from="1684930929273" duration="27000000" />
+      <workItem from="1684981639149" duration="6484000" />
+      <workItem from="1685028161365" duration="9278000" />
+      <workItem from="1685045060043" duration="1987000" />
+      <workItem from="1685047758412" duration="5001000" />
+      <workItem from="1685054743523" duration="15892000" />
+      <workItem from="1685105014806" duration="4649000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
