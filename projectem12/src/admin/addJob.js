@@ -81,7 +81,7 @@ export default function AddJob() {
                 <option value="">Select Role</option>
                 <option value="DPS">DPS</option>
                 <option value="TANK">TANK</option>
-                <option value="Healer">Healer</option>
+                <option value="HEALER">HEALER</option>
               </select>
             </div>
             <button type="submit" className="btn btn-primary">

@@ -100,8 +100,8 @@ export default function EditJob({  }) {
                 >
                     <option value="">Select Role</option>
                     <option value="DPS">DPS</option>
-                    <option value="TANK">Tank</option>
-                    <option value="HEALER">Healer</option>
+                    <option value="TANK">TANK</option>
+                    <option value="HEALER">HEALER</option>
                 </select>
                 </div>
                 <button type="submit" className="btn btn-primary">
