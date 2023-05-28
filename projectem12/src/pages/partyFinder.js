@@ -239,7 +239,7 @@ export default function PartyFinder() {
                       backgroundImage: `url(${party.raid.image})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
-                      height: '10vh',
+                      height: '20vh',
                     }}
                   >
                     <h5>{party.raid.name}</h5>
