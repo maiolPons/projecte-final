@@ -233,6 +233,7 @@ export default function PartyFinder() {
             parties.map((party, index) => {
               return (
                 <div key={party.id} className="col-md-6 mb-3">
+                  {console.log(party.raid.image)}
                   <div
                     className="party-card friendship"
                     style={{
