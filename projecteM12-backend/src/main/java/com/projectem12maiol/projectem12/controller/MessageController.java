@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -75,21 +74,21 @@ public class MessageController {
 
                 return ResponseEntity.status(HttpStatus.CREATED).body(createdMessage);
             } catch (NumberFormatException e) {
-                // Handle parsing errors
+
                 e.printStackTrace();
                 return ResponseEntity.badRequest().build();
             } catch (IllegalArgumentException e) {
-                // Handle invalid senderId or receiverId
+
                 e.printStackTrace();
                 return ResponseEntity.badRequest().build();
             } catch (Exception e) {
-                // Handle any other exceptions
+
                 e.printStackTrace();
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
             }
         }
 
-        // Handle invalid or missing parameters
+
         return ResponseEntity.badRequest().build();
     }
 

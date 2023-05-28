@@ -9,7 +9,6 @@ import com.projectem12maiol.projectem12.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -30,17 +29,13 @@ public class MemberController {
     public Member createMember(@RequestBody Map<String, Object> memberRequest) {
         Long jobId = Long.parseLong(memberRequest.get("job").toString());
 
-        // Fetch the job and user entities based on their IDs
         Job job = jobRepository.findById(jobId).orElseThrow(() -> new IllegalArgumentException("Invalid job ID"));
         User user = userRepository.findByUsername(memberRequest.get("user").toString());
 
-
-        // Create the member entity and set the job and user
         Member member = new Member();
         member.setJob(job);
         member.setUser(user);
 
-        // Save the member entity
         return memberRepository.save(member);
     }
 }

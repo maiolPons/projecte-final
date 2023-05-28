@@ -11,7 +11,6 @@ public class Emote {
     private String name;
     private String imagePath;
     private boolean status = true;
-    // Constructors, getters, and setters
 
     public Emote() {
 
@@ -21,8 +20,6 @@ public class Emote {
         this.name = name;
         this.imagePath = imagePath;
     }
-
-    // Getters and setters
 
     public Long getId() {
         return id;

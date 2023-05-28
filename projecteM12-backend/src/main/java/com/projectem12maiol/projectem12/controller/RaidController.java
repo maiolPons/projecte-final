@@ -36,14 +36,14 @@ public class RaidController {
         try {
             String originalFileName = StringUtils.cleanPath(image.getOriginalFilename());
             String fileName = System.currentTimeMillis() + "_" + originalFileName;
-            Path uploadPath = Paths.get("../projectem12/public/raid/"); // Path to save images
+            Path uploadPath = Paths.get("../projectem12/public/raid/");
             if (!Files.exists(uploadPath)) {
                 Files.createDirectories(uploadPath);
             }
             Path filePath = uploadPath.resolve(fileName);
             image.transferTo(filePath);
 
-            // Save the raid to the database
+
             Raid raid = Raid.builder()
                     .name(name)
                     .image("raid/" + fileName)
@@ -77,7 +77,7 @@ public class RaidController {
             if (image != null && !image.isEmpty()) {
                 String originalFileName = StringUtils.cleanPath(image.getOriginalFilename());
                 String fileName = System.currentTimeMillis() + "_" + originalFileName;
-                Path uploadPath = Paths.get("../projectem12/public/raid/"); // Path to save images
+                Path uploadPath = Paths.get("../projectem12/public/raid/");
                 if (!Files.exists(uploadPath)) {
                     Files.createDirectories(uploadPath);
                 }
@@ -85,7 +85,6 @@ public class RaidController {
                 image.transferTo(filePath);
                 raid.setImage("raid/" + fileName);
             }
-
             raidRepository.save(raid);
 
             return ResponseEntity.ok("Raid updated successfully!");
@@ -109,7 +108,7 @@ public class RaidController {
         Optional<Raid> optionalRaid = raidRepository.findById(id);
         if (optionalRaid.isPresent()) {
             Raid raid = optionalRaid.get();
-            raid.setStatus(!raid.isStatus()); // Toggle the status
+            raid.setStatus(!raid.isStatus());
             Raid updatedRaid = raidRepository.save(raid);
             return ResponseEntity.ok(updatedRaid);
         } else {

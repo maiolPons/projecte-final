@@ -46,8 +46,6 @@ public class UserController {
                 String message = "Failed to parse user data";
                 return ResponseEntity.badRequest().body(message);
             }
-
-            // Check if username or email already exists
             User existingUser = userRepository.findByUsernameOrEmail(user.getUsername(), user.getEmail());
             if (existingUser != null) {
                 String message = "A user with the same username or email already exists";
@@ -62,7 +60,7 @@ public class UserController {
             User savedUser = userRepository.save(user);
             return ResponseEntity.ok(savedUser);
         }catch (Exception e){
-            String message = "An error occurred while adding the user.";
+            String message = "The username or Email is already in use.";
             return ResponseEntity.badRequest().body(message);
         }
     }
@@ -75,7 +73,7 @@ public class UserController {
         try {
             String originalFileName = StringUtils.cleanPath(avatarFile.getOriginalFilename());
             String fileName = System.currentTimeMillis() + "_" + originalFileName;
-            Path uploadPath = Paths.get("../projectem12/public/uploads/"); //path saved images
+            Path uploadPath = Paths.get("../projectem12/public/uploads/");
             if (!Files.exists(uploadPath)) {
                 Files.createDirectories(uploadPath);
             }
@@ -114,7 +112,6 @@ public class UserController {
             userMap.put("email", user.getEmail());
             userMap.put("avatar", user.getAvatarPath());
 
-            // check if current user has a pending friend request with this user
             List<Friend> friendRequests = friendRepository.findBySenderAndReceiver(currentUser, user);
             if (!friendRequests.isEmpty()) {
                 userMap.put("friendRequestPending", true);
@@ -134,8 +131,6 @@ public class UserController {
         String password = loginData.get("password");
         User user = userRepository.findByUsername(username);
         if (user != null && verifyPassword(password,user.getPassword())) {
-            // password is correct
-            // create new session if session is not new
 
             if (!session.isNew()) {
                 session.invalidate();
@@ -145,7 +140,6 @@ public class UserController {
 
             return user.getRole()+"/"+user.getUsername()+"/"+user.getId();
         } else {
-            // password is incorrect or user does not exist
             return "error"+"/"+"error"+"/"+"error";
         }
     }
@@ -193,7 +187,6 @@ public class UserController {
                 return ResponseEntity.badRequest().body(message);
             }
 
-            // Check if username or email already exists for another user
             User userWithSameUsername = userRepository.findByUsernameAndIdNot(updatedUser.getUsername(), userId);
             if (userWithSameUsername != null) {
                 String message = "A user with the same username already exists";

@@ -390,7 +390,7 @@ export default function PartyFinder() {
               <Form.Label>Description:</Form.Label>
               <Form.Control
                 type="text"
-                maxlength="30"
+                maxLength="30"
                 value={description}
                 onChange={handleDescriptionChange}
                 placeholder="Enter description (minimum 15 characters)"

@@ -47,10 +47,10 @@ export default function AddUser(){
           setSuccessMessage('User added successfully!');
           sessionStorage.setItem('role', 'standar');
           sessionStorage.setItem('username', user.username);
-          window.location.href = '/';
+          window.location.href = '/logenHome';
         } catch (error) {
           console.log(error);
-          setErrorMessage('An error occurred while adding the user.');
+          setErrorMessage('The username or Email is already in use.');
         }
         
       };

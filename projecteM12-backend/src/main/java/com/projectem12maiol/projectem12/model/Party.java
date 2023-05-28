@@ -58,8 +58,6 @@ public class Party {
     private LocalDateTime creationDate;
 
 
-    // Constructors, getters, and setters
-
     public Party() {
         this.creationDate = LocalDateTime.now();
     }

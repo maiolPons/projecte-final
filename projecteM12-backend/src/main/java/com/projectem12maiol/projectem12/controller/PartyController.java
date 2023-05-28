@@ -167,31 +167,17 @@ public class PartyController {
         Long partyId = Long.parseLong(leaveRequest.get("partyId").toString());
         String currentUser = leaveRequest.get("currentUser").toString();
 
-
         Party party = partyRepository.findById(partyId)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid party ID"));
-
-
         User user = userRepository.findByUsername(currentUser);
-
-
         if (hasMember(user, party)) {
-
             Member member = findMemberByUser(user, party);
-
             removeMemberFromParty(member, party);
-
             memberRepository.delete(member);
-
-
             if (areAllMembersNull(party)) {
-
                 deletePartyMessages(party);
-
-
                 partyRepository.delete(party);
             } else {
-
                 partyRepository.save(party);
             }
         }
@@ -272,23 +258,14 @@ public class PartyController {
         Long partyId = Long.parseLong(messageRequest.get("partyId").toString());
         String currentUser = messageRequest.get("currentUser").toString();
         String message = messageRequest.get("message").toString();
-
-
         Party party = partyRepository.findById(partyId)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid party ID"));
-
-
         User user = userRepository.findByUsername(currentUser);
-
-
         PartyMessage partyMessage = new PartyMessage();
         partyMessage.setParty(party);
         partyMessage.setPartyMemberNickname(user.getUsername());
-
         partyMessage.setCreationDate(LocalDateTime.now());
         partyMessage.setMessage(message);
-
-
         partyMessageRepository.save(partyMessage);
     }
 
@@ -297,26 +274,18 @@ public class PartyController {
         Long partyId = Long.parseLong(emoteRequest.get("partyId").toString());
         String currentUser = emoteRequest.get("currentUser").toString();
         Long emoteId = Long.parseLong(emoteRequest.get("emoteId").toString());
-
-
         Party party = partyRepository.findById(partyId)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid party ID"));
-
-
         User user = userRepository.findByUsername(currentUser);
 
         Emote emote = emoteRepository.findById(emoteId)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid emote ID"));
-
-
         PartyMessage partyMessage = new PartyMessage();
         partyMessage.setParty(party);
         partyMessage.setPartyMemberNickname(user.getUsername());
         partyMessage.setEmote(emote);
         partyMessage.setCreationDate(LocalDateTime.now());
         partyMessage.setMessage("");
-
-
         partyMessageRepository.save(partyMessage);
     }
     @GetMapping("/partyMessages/{partyId}")

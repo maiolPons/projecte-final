@@ -38,7 +38,6 @@ export default function LoginUser(){
                 `http://localhost:8080/parties/partiesForMember/${result.data.split("/")[1]}`
               );
                 const data = response.data[0].id;
-                console.log(data)
                 sessionStorage.setItem("party", data);
         } catch (error) {
             console.error("Error retrieving parties:", error);

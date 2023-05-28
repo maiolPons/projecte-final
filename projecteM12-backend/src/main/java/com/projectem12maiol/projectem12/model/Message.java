@@ -1,5 +1,5 @@
 package com.projectem12maiol.projectem12.model;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -27,7 +27,6 @@ public class Message {
     @Column(nullable = false)
     private LocalDateTime sentDateTime;
 
-    // Other message properties and getters/setters
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "sender_id", nullable = false)
@@ -49,8 +48,6 @@ public class Message {
         this.recipient = recipient;
     }
 
-
-    // getters/setters for recipient
 
 
     public Long getId() {

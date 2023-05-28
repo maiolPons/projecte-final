@@ -66,11 +66,11 @@ public class EmoteController {
 
             return ResponseEntity.ok("Emote sent successfully");
         } catch (IllegalArgumentException e) {
-            // Handle invalid senderId, receiverId, or emoteId
+
             e.printStackTrace();
             return ResponseEntity.badRequest().body("Invalid senderId, receiverId, or emoteId");
         } catch (Exception e) {
-            // Handle any other exceptions
+
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error sending emote");
         }
@@ -85,14 +85,14 @@ public class EmoteController {
         try {
             String originalFileName = StringUtils.cleanPath(image.getOriginalFilename());
             String fileName = System.currentTimeMillis() + "_" + originalFileName;
-            Path uploadPath = Paths.get("../projectem12/public/emote/"); //path saved images
+            Path uploadPath = Paths.get("../projectem12/public/emote/");
             if (!Files.exists(uploadPath)) {
                 Files.createDirectories(uploadPath);
             }
             Path filePath = uploadPath.resolve(fileName);
             image.transferTo(filePath);
 
-            // Save the emote to the database
+
             Emote emote = new Emote(name, "emote/" + fileName);
             emoteRepository.save(emote);
 
@@ -118,7 +118,7 @@ public class EmoteController {
         Optional<Emote> optionalEmote = emoteRepository.findById(id);
         if (optionalEmote.isPresent()) {
             Emote emote = optionalEmote.get();
-            emote.setStatus(!emote.isStatus()); // Toggle the status
+            emote.setStatus(!emote.isStatus());
             Emote updatedEmote = emoteRepository.save(emote);
             return ResponseEntity.ok(updatedEmote);
         } else {
@@ -142,7 +142,7 @@ public class EmoteController {
             if (image != null && !image.isEmpty()) {
                 String originalFileName = StringUtils.cleanPath(image.getOriginalFilename());
                 String fileName = System.currentTimeMillis() + "_" + originalFileName;
-                Path uploadPath = Paths.get("../projectem12/public/emote/"); // Path to save images
+                Path uploadPath = Paths.get("../projectem12/public/emote/");
                 if (!Files.exists(uploadPath)) {
                     Files.createDirectories(uploadPath);
                 }

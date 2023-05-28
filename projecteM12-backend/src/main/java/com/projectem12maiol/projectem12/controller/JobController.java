@@ -40,14 +40,14 @@ public class JobController {
         try {
             String originalFileName = StringUtils.cleanPath(image.getOriginalFilename());
             String fileName = System.currentTimeMillis() + "_" + originalFileName;
-            Path uploadPath = Paths.get("../projectem12/public/job/"); // Path to save images
+            Path uploadPath = Paths.get("../projectem12/public/job/");
             if (!Files.exists(uploadPath)) {
                 Files.createDirectories(uploadPath);
             }
             Path filePath = uploadPath.resolve(fileName);
             image.transferTo(filePath);
 
-            // Save the job to the database
+
             Job job = Job.builder()
                     .name(name)
                     .image("job/" + fileName)
@@ -81,7 +81,7 @@ public class JobController {
             if (image != null && !image.isEmpty()) {
                 String originalFileName = StringUtils.cleanPath(image.getOriginalFilename());
                 String fileName = System.currentTimeMillis() + "_" + originalFileName;
-                Path uploadPath = Paths.get("../projectem12/public/job/"); // Path to save images
+                Path uploadPath = Paths.get("../projectem12/public/job/");
                 if (!Files.exists(uploadPath)) {
                     Files.createDirectories(uploadPath);
                 }
@@ -116,7 +116,7 @@ public class JobController {
         Optional<Job> optionalJob = jobRepository.findById(id);
         if (optionalJob.isPresent()) {
             Job job = optionalJob.get();
-            job.setStatus(!job.isStatus()); // Toggle the status
+            job.setStatus(!job.isStatus());
             Job updatedJob = jobRepository.save(job);
             return ResponseEntity.ok(updatedJob);
         } else {
@@ -125,7 +125,7 @@ public class JobController {
     }
     @GetMapping("/getJobsByRole/{role}")
     public List<Job> getJobsByRole(@PathVariable String role) {
-        // Retrieve jobs based on the selected role
+
         return jobRepository.findByRoleAndStatus(role,true);
     }
 }

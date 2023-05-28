@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c104847-c17c-44cf-8e66-dde74b913612" name="Changes" comment="" />
+    <list default="true" id="0c104847-c17c-44cf-8e66-dde74b913612" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/controller/EmoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/controller/EmoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/controller/JobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/controller/PartyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/controller/PartyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/controller/RaidController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/controller/RaidController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/model/Emote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/model/Emote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/model/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectem12maiol/projectem12/model/Party.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectem12/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../projectem12/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectem12/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../projectem12/node_modules/.cache/default-development/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectem12/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../projectem12/node_modules/.cache/default-development/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectem12/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../projectem12/node_modules/.cache/default-development/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectem12/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/../projectem12/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +35,9 @@
         <option value="Interface" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -43,7 +64,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/maiol/Desktop/springSalma-master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/maiol/Desktop/projecte final/projecteM12-backend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -95,6 +116,8 @@
       <workItem from="1685047758412" duration="5001000" />
       <workItem from="1685054743523" duration="15892000" />
       <workItem from="1685105014806" duration="4649000" />
+      <workItem from="1685126446525" duration="594000" />
+      <workItem from="1685237446754" duration="2520000" />
     </task>
     <servers />
   </component>
