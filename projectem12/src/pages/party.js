@@ -181,7 +181,7 @@ export default function Party() {
                                 style={{ width: "80px", height: "max-content" }}
                                 alt="Friend Avatar"
                                 className="avatar"
-                            />
+                            /> 
                             </div>
                             <div className="friend-details" style={{ width: "100%", lineHeight: "40px" }}>
                             <p className="username" style={{ fontSize: "14px", fontWeight: "bold", marginLeft: "10px" }}>{"Awaiting Party Member"}</p>
@@ -205,13 +205,23 @@ export default function Party() {
                             <p className="username" style={{ fontSize: "14px", fontWeight: "bold", marginLeft: "10px" }}>{member.user.nickname}</p>
                             </div>
                             <div className="friend-avatar">
-                            <img
-                                src={"/" + member.user.avatarPath ||
+                            {member.user.avatarPath == null ? (
+                                <img
+                                src={
                                 `https://ui-avatars.com/api/?name=${member.user.nickname}&background=007bff&color=fff`}
                                 style={{ width: "80px", height: "max-content", borderRadius: "50%" }}
                                 alt="Friend Avatar"
                                 className="avatar"
                             />
+                            ) : (
+                                <img
+                                src={"/" + member.user.avatarPath }
+                                style={{ width: "80px", height: "max-content", borderRadius: "50%" }}
+                                alt="Friend Avatar"
+                                className="avatar"
+                            />
+                            )}
+                            
                             </div>
                         </div>
                         </div>
