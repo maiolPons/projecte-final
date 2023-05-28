@@ -57,21 +57,26 @@ export default function EditUser() {
     formData.append("nickname", user.nickname);
     formData.append("email", user.email);
     formData.append("username", user.username);
-    formData.append("password", user.password);
-    formData.append("avatar", user.avatar);
-  
-    try {
-      await axios.put(`http://localhost:8080/users/editUser/${user.id}`, formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-      alert("Profile Changes saved"); 
-    } catch (error) {
-      console.error("An error occurred while updating the user.", error);
-      alert("Error editing profile"); 
+
+    if (user.password !== "") {
+        formData.append("password", user.password);
     }
-  };
+
+    formData.append("avatar", user.avatar);
+
+    try {
+        await axios.put(`http://localhost:8080/users/editUser/${user.id}`, formData, {
+            headers: {
+                "Content-Type": "multipart/form-data",
+            },
+        });
+        alert("Profile Changes saved");
+    } catch (error) {
+        console.error("An error occurred while updating the user.", error);
+        alert("Error editing profile");
+    }
+};
+
 
   return (
     <div className="container">
@@ -127,7 +132,6 @@ export default function EditUser() {
                 className="form-control"
                 placeholder="Password"
                 name="password"
-                value={user.password}
                 onChange={onInputChange}
               />
             </div>

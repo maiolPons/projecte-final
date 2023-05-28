@@ -202,7 +202,8 @@ public class UserController {
             existingUser.setNickname(updatedUser.getNickname());
             existingUser.setEmail(updatedUser.getEmail());
             existingUser.setUsername(updatedUser.getUsername());
-            existingUser.setPassword(hashPassword(updatedUser.getPassword()));
+
+  
 
             if (avatarFile != null) {
                 String avatarPath = saveAvatarImage(avatarFile);
@@ -216,5 +217,6 @@ public class UserController {
             return ResponseEntity.badRequest().body(message);
         }
     }
+
 
 }
