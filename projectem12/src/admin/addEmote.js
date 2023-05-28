@@ -30,7 +30,7 @@
             },
           });
           console.log("Emote created successfully!");
-          window.location.href = '/listEmotes';
+          window.location.href = '/emoteList';
 
         } catch (error) {
           console.error("An error occurred while creating the emote.", error);

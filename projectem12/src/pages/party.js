@@ -263,7 +263,7 @@ export default function Party() {
                                 color: message.partyMemberNickname === currentUser ? 'white' : 'black',
                                 justifyContent: message.partyMemberNickname === currentUser ? 'flex-end' : 'flex-start',
                                 padding: '8px',
-                                width: '80px',
+                                width: '120px',
                                 }}
                                 className="content"
                                 src={"/" + message.emote.imagePath}

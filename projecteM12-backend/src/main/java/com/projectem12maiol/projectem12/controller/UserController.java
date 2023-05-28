@@ -203,7 +203,7 @@ public class UserController {
             existingUser.setEmail(updatedUser.getEmail());
             existingUser.setUsername(updatedUser.getUsername());
 
-  
+
 
             if (avatarFile != null) {
                 String avatarPath = saveAvatarImage(avatarFile);

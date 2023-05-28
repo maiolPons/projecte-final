@@ -38,6 +38,10 @@
             if (!existingRequests.isEmpty()) {
                 return ResponseEntity.badRequest().body("Friend request already sent to this user");
             }
+            List<Friend> existingRequests2 = friendRepository.findBySenderAndReceiver(receiver, sender);
+            if (!existingRequests.isEmpty()) {
+                return ResponseEntity.badRequest().body("Friend request already sent to this user");
+            }
 
             Friend friendRequest = new Friend();
             friendRequest.setSender(sender);
