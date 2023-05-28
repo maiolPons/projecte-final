@@ -80,7 +80,7 @@ export default function AddJob() {
               >
                 <option value="">Select Role</option>
                 <option value="DPS">DPS</option>
-                <option value="Tank">Tank</option>
+                <option value="TANK">TANK</option>
                 <option value="Healer">Healer</option>
               </select>
             </div>
